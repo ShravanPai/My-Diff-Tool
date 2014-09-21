@@ -5,7 +5,7 @@ Created on Sep 18, 2014
 '''
 
 def entry():
-    print 'Hello'
+    print 'Hello World'
 
 
 
