@@ -1,3 +1,6 @@
 A Custom Diff tool
+Development Milestones/progress
 
-Updated on : 09/20/2014
+
+09/23/2014: Files should contain equal number of line. Outputs if there is a difference
+	    (Created using built-in tools. yet to implement the algorithm)
