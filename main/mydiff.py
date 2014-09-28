@@ -5,7 +5,7 @@ Created on Sep 18, 2014
 '''
 from sys import argv
 from timeit import itertools
-
+from numpy import *
 
 def entry():
     # Get source and target file contents
@@ -26,14 +26,11 @@ def get_diff(source_contents, target_contents):
     source = source_contents.split('\n')
     target = target_contents.split('\n')
     line_number = 1
-    for sline, tline in itertools.izip(source, target):
-        if sline != tline:
-            print '----------------------------'
-            print 'Line : ' + str(line_number)
-            print sline
-            print tline
-        line_number += 1
-    print '----------------------------'
+    for source_line, target_line in itertools.izip(source, target):
+        source_length = len(source_line)
+        target_length = len(target_line)
+        calc_matrix = zeros((source_length, target_length))
+
 
 if __name__ == '__main__':
     entry()
