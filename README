@@ -4,3 +4,6 @@ Development Milestones/progress
 
 09/23/2014: Files should contain equal number of line. Outputs if there is a difference
 	    (Created using built-in tools. yet to implement the algorithm)
+
+09/28/2014: Diff works if files have equal number of lines.
+	    Yet to implement the logic for different number of lines
