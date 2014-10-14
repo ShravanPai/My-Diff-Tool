@@ -9,6 +9,7 @@ from sys import argv
 from timeit import itertools
 from numpy import *
 from termcolor import colored
+import linecache
  
 
 def entry():
@@ -52,7 +53,23 @@ def get_diff(source_contents, target_contents):
             print '----------------------------------------------------------'
             
         line_number += 1
-        
+    
+    # Handle the remaining lines
+    if line_number > len(source):
+       remaining_lines = target[line_number-1:]
+       for line in remaining_lines:
+           print 'Line Number : ' + str(line_number)
+           print colored(' - ' + line, 'red')
+           print '----------------------------------------------------------'
+           line_number += 1
+    else: 
+        remaining_lines = source[line_number-1:]
+        for line in remaining_lines:
+           print 'Line Number : ' + str(line_number)
+           print colored(' + ' + line, 'green')
+           print '----------------------------------------------------------'
+           line_number += 1
+     
 # returns the sequence length, given two lines
 def calculate_sequence_length(calc_matrix, src_len, trg_len, src_line,
                                trg_line):

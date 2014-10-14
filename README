@@ -1,6 +1,7 @@
 A Custom Diff tool
-Development Milestones/progress
+NOTE: This is a line by line diff tool and not side by side diff tool
 
+Development Milestones/progress
 Project Status : In Progress
 
 
@@ -9,3 +10,5 @@ Project Status : In Progress
 
 09/28/2014: Diff works if files have equal number of lines.
 	    Yet to implement the logic for different number of lines
+
+10/13/2014: Added logic to handle difference in the number of lines
